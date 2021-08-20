@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plug-in-libraries/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <script src="D:\prodian\angular-js\plug-in-libraries\angular-js.min.js"></script>
+    <script src="D:\prodian\angular-js\app.js"></script>
+    
+    <title>angular-js</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div class="container mt-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                <th>S.No</th>
+                <th>First name</th>
+                <th>Last name</th>
+                </tr>  
+                <tr ng-repeat="x in names">  <td>{{$index  +1}}</td> 
+                     
+                    <td>{{x.firstName}}</td>
+                    <td>{{x.lastName}}</td>
+                </tr>  
+            </thead>
+        </table>   
+        <form ng-submit="addEntry()">
+             
+            First name: <input type="text" ng-model="newData.firstName">
+            Last name: <input type="text" ng-model="newData.lastName">
+            
+            <input type="submit">  
+
+        </form>
+        
+        
+    </div>
+</div>
+</body> 
+</html>
